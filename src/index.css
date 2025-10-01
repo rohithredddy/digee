@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Professional Digital Agency Design System */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    /* Brand Colors - Professional & Warm */
+    --background: 0 0% 100%;
+    --foreground: 215 25% 27%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 27%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 27%;
+    
+    /* Primary - Professional Blue */
+    --primary: 215 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-muted: 215 100% 96%;
+    
+    /* Secondary - Energy Orange */
+    --secondary: 25 95% 53%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-muted: 25 95% 95%;
+    
+    /* Accent - Modern Teal */
+    --accent: 180 100% 45%;
+    --accent-foreground: 0 0% 100%;
+    --accent-muted: 180 100% 95%;
+    
+    /* Neutral Grays */
+    --muted: 215 15% 96%;
+    --muted-foreground: 215 15% 45%;
+    --muted-dark: 215 25% 85%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 215 15% 92%;
+    --input: 215 15% 92%;
+    --ring: 215 100% 50%;
+    
+    --radius: 0.75rem;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(215 100% 50%) 0%, hsl(180 100% 45%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(215 15% 98%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(215 15% 99%) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(215 25% 27% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(215 25% 27% / 0.1), 0 2px 4px -1px hsl(215 25% 27% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(215 25% 27% / 0.1), 0 4px 6px -2px hsl(215 25% 27% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(215 25% 27% / 0.1), 0 10px 10px -5px hsl(215 25% 27% / 0.04);
+    --shadow-glow: 0 0 40px hsl(215 100% 50% / 0.15);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Mode Colors */
+    --background: 215 30% 8%;
+    --foreground: 0 0% 95%;
+    
+    --card: 215 30% 10%;
+    --card-foreground: 0 0% 95%;
+    
+    --popover: 215 30% 10%;
+    --popover-foreground: 0 0% 95%;
+    
+    /* Primary - Bright Blue in Dark */
+    --primary: 215 100% 60%;
+    --primary-foreground: 215 30% 8%;
+    --primary-muted: 215 100% 15%;
+    
+    /* Secondary - Warm Orange in Dark */
+    --secondary: 25 95% 58%;
+    --secondary-foreground: 215 30% 8%;
+    --secondary-muted: 25 95% 15%;
+    
+    /* Accent - Bright Teal in Dark */
+    --accent: 180 100% 50%;
+    --accent-foreground: 215 30% 8%;
+    --accent-muted: 180 100% 15%;
+    
+    /* Dark Neutrals */
+    --muted: 215 20% 15%;
+    --muted-foreground: 215 15% 65%;
+    --muted-dark: 215 25% 20%;
+    
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 0 0% 95%;
+    
+    --border: 215 20% 20%;
+    --input: 215 20% 20%;
+    --ring: 215 100% 60%;
+    
+    /* Dark Mode Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(215 100% 60%) 0%, hsl(180 100% 50%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(215 30% 10%) 0%, hsl(215 25% 12%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(215 30% 8%) 0%, hsl(215 25% 10%) 100%);
+    
+    /* Dark Shadows */
+    --shadow-glow: 0 0 40px hsl(215 100% 60% / 0.2);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter antialiased;
+  }
+  
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer components {
+  /* Custom component styles using design system */
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .gradient-subtle {
+    background: var(--gradient-subtle);
+  }
+  
+  .shadow-custom {
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+  
+  .text-gradient {
+    background: var(--gradient-hero);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
